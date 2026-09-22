@@ -34,7 +34,7 @@ conda install -c mx reduce
 ```
 
 # 📦 Datasets & Benchmark Results
-Please download from [Zenodo dataset](https://zenodo.org/records/18183463) the result on your device and unzip the files. The downloaded dataset already follows the required folder structure, so you can directly use it for evaluation without any reorganization.
+Please download from [Zenodo dataset](https://zenodo.org/records/20233505) the result on your device and unzip the files. The downloaded dataset already follows the required folder structure, so you can directly use it for evaluation without any reorganization.
 
 # 📁 Required Directory Structure
 

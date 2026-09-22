@@ -1,5 +1,5 @@
 
-# MolGenBench: CodeBase for "Benchmarking Real-World Applicability of Molecular Generative Models from De novo Design to Lead Optimization with MolGenBench"
+# MolGenBench: CodeBase for "Evaluating generative models for structure based drug discovery from de novo design to lead optimization"
 ![MolGenBench overview](./FigShow/MolGenBench.svg "Overview of MolGenBench pipeline")
 
 ## 🔔 News
@@ -34,7 +34,7 @@ conda install -c mx reduce
 ```
 
 # 📦 Datasets & Benchmark Results
-Please download from [Zenodo dataset](https://zenodo.org/records/18183463) the result on your device and unzip the files. The downloaded dataset already follows the required folder structure, so you can directly use it for evaluation without any reorganization.
+Please download from [Zenodo dataset](https://zenodo.org/records/20233505) the result on your device and unzip the files. The downloaded dataset already follows the required folder structure, so you can directly use it for evaluation without any reorganization.
 
 # 📁 Required Directory Structure
 

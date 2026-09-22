@@ -3,6 +3,8 @@
 ![MolGenBench overview](./FigShow/MolGenBench.svg "Overview of MolGenBench pipeline")
 
 ## 🔔 News
+[2026-09-22] We have launched the [MolGenBench Hugging Face Space](https://huggingface.co/spaces/InteligentDD/molgenbench-leaderboard) for online submission, evaluation, and leaderboard access.
+
 [2026-01-09] We have released Version 4 of the [dataset](https://zenodo.org/records/20233505). In this release, we fixed the raw CSV results of MotifDist for the H2L model. The aggregated YAML results under the `paper_results` folder were already correct as of commit [`afae9326`](https://github.com/Intelligent-Drug-Discovery-Lab/MolGenBench/tree/afae93266cd4b7e7f63878adfa7612b746b8cac9).
 
 [2026-01-09] We have released Version 3 of the [dataset](https://zenodo.org/records/18183463). In this release, we added pre-computed evaluation CSV results to each results folder. We also uploaded the aggregated results under the `paper_results` folder in the repository.
@@ -183,4 +185,3 @@ evaluator = Evaluator(
     denovo hit fraction
    relative_dir/FigShow/Denovo_hit_recovery/Deonovo_repeats_hit_fraction_boxplot.ipynb
 ``` 
-

@@ -1,5 +1,5 @@
 
-# MolGenBench: CodeBase for "Benchmarking Real-World Applicability of Molecular Generative Models from De novo Design to Lead Optimization with MolGenBench"
+# MolGenBench: CodeBase for "Evaluating generative models for structure based drug discovery from de novo design to lead optimization"
 ![MolGenBench overview](./FigShow/MolGenBench.svg "Overview of MolGenBench pipeline")
 
 ## 🔔 News

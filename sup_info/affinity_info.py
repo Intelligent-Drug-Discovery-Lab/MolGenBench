@@ -38,7 +38,33 @@ def normalize_affinity_map(info_map):
     
     return normalized_dict
 
+def normalize_affinty_map_discount(info_map):
+    """
+    Normalize affinity values with a discounted cumulative gain (DCG)-style positional discount
+    for NADR calculation.
+    
+    Args:
+        info_map (dict): A dictionary mapping SMILES strings to raw affinity values (in nM).
+            {smiles: affinity_value, ...}
+    
+    Returns:
+        dict: A dictionary mapping SMILES strings to discounted normalized scores.
+            Score = (pAffinity / max_pAffinity) / log2(rank + 1)
+            where rank is the ascending affinity order.
+    """
+    # Sort the dictionary by values in ascending order
+    sorted_dict = {
+        k: get_pAffinity(float(v)) 
+        for k, v in sorted(info_map.items(), key=lambda item: float(item[1]), reverse=False) 
+        if float(v) >= 0.0
+    }
 
+    # Normalize the values
+    min_value = min(sorted_dict.values())
+    max_value = max(sorted_dict.values())
+    normalized_dict = {k: ((v - min_value) / (max_value - min_value) / np.log2(idx + 1 + 1)) for idx, (k, v) in enumerate(sorted_dict.items())}
+
+    return normalized_dict
 
 # # Generate affinity info map and save as pickle file
 # affinity_info_map = defaultdict(dict)
@@ -80,3 +106,7 @@ for uniprot_series, info_map in affinity_info_map.items():
     normalized_map = normalize_affinity_map(info_map)
     normalized_affinity_info_map[uniprot_series] = normalized_map
 
+normalized_affinity_info_map_discount = {}
+for uniprot_series, info_map in affinity_info_map.items():
+    normalized_map = normalize_affinty_map_discount(info_map)
+    normalized_affinity_info_map_discount[uniprot_series] = normalized_map
